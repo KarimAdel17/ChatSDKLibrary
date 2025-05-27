@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ChatSDKLibrary",
-            targets: ["ChatSDK"]),
+            targets: ["ChatSDKLibrary"]),
     ],
     dependencies: [
 //        .package(url: "https://github.com/socketio/socket.io-client-swift", from: "16.0.0"),
