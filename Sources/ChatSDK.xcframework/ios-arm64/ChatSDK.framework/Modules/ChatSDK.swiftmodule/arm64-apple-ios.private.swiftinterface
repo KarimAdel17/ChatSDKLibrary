@@ -1,0 +1,382 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios18.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ChatSDK
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+import AVFoundation
+import AVKit
+import Combine
+import CoreData
+import DeveloperToolsSupport
+import Foundation
+import JavaScriptCore
+import MobileCoreServices
+import PhotosUI
+import Security
+import SocketIO
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebRTC
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc(CD_User) public class CD_User : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class ChatManager {
+  public static var shared: ChatSDK.ChatManager! {
+    get
+  }
+  public static func initialize(_ appKey: Swift.String, _ appId: Swift.String, _ user: [Swift.String : Any], _ nav: UIKit.UINavigationController)
+  final public func initaiteChat(receiver: [Swift.String : Any], productId: Swift.String? = nil, productName: Swift.String? = nil, productImage: Swift.String? = nil)
+  final public func chatsState()
+  final public func presentChat(from viewController: UIKit.UIViewController)
+  final public func setBackgroundThemeColor(_ setColor: UIKit.UIColor)
+  final public func setBackgroundThemeImage(_ setImageName: Swift.String)
+  final public func setNavigationThemeColor(_ setColor: UIKit.UIColor)
+  final public func setSendMessageThemeColor(_ setColor: UIKit.UIColor)
+  final public func setReceiveMessageThemeColor(_ setColor: UIKit.UIColor)
+  final public func setSendMesssageBackgroundThemeColor(_ setColor: UIKit.UIColor)
+  final public func setThemeFontByName(_ setFont: Swift.String)
+  final public func setSendMessageTextColor(_ setColor: UIKit.UIColor)
+  final public func setReceiveMessageTextColor(_ setColor: UIKit.UIColor)
+  final public func setLanguage(_ setLanguage: ChatSDK.globalLanguage)
+  @objc deinit
+}
+extension ChatSDK.CD_ChatRooms {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ChatSDK.CD_ChatRooms>
+  @objc @NSManaged dynamic public var chatRoomId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userId: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension ChatSDK.CD_ChatRooms : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (ChatSDK.Reachability) -> ()
+  public typealias NetworkUnreachable = (ChatSDK.Reachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: ChatSDK.Reachability.NetworkStatus, b: ChatSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    @available(*, deprecated, renamed: "unavailable")
+    public static let none: ChatSDK.Reachability.Connection
+    public static func == (a: ChatSDK.Reachability.Connection, b: ChatSDK.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: ChatSDK.Reachability.NetworkReachable?
+  public var whenUnreachable: ChatSDK.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: ChatSDK.Reachability.Connection {
+    get
+  }
+  public var connection: ChatSDK.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension ChatSDK.Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(CD_ChatRooms) public class CD_ChatRooms : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(CDVehicle) public class CDVehicle : CoreData.NSManagedObject {
+  @objc @NSManaged dynamic public var id: Foundation.UUID? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension ChatSDK.CD_ChatMsg {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ChatSDK.CD_ChatMsg>
+  @objc @NSManaged dynamic public var chatRoomId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var content: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var messageId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var messageStatus: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var messageType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var receiverId: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var senderId: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension ChatSDK.CD_ChatMsg : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+@_inheritsConvenienceInitializers @objc(CDPerson) public class CDPerson : CoreData.NSManagedObject {
+  @objc @NSManaged dynamic public var id: Foundation.UUID? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var toVehicle: Swift.Set<ChatSDK.CDVehicle>? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Swift.String {
+  public func translated() -> Swift.String
+}
+public enum globalLanguage : Swift.String {
+  case English
+  case Arabic
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ThemeManager {
+  public static let shared: ChatSDK.ThemeManager
+  public func setGlobalBackgroundColor(_ color: UIKit.UIColor)
+  @objc deinit
+}
+extension ChatSDK.CD_User {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ChatSDK.CD_User>
+  @objc @NSManaged dynamic public var chatRoomId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var chatType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var countryCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var date: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var email: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lastMessage: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lastMessageDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lastOnline: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var messageSentAt: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var messageStatus: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var messageType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var mobileNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var profileUrl: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var receiverId: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var senderId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var unreadMessagesCount: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userRole: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var language: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var appKey: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var version: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var status: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var allUserDetails: ObjectiveC.NSObject? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var groupName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var imageUrl: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension ChatSDK.CD_User : Swift.Identifiable {
+  public typealias ID = Swift.String?
+}
+public struct SenderDetails : Swift.Codable {
+  public var userId: Swift.String?
+  public var userName: Swift.String?
+  public var countryCode: Swift.String?
+  public var mobileNumber: Swift.String?
+  public var email: Swift.String?
+  public var profileUrl: Swift.String?
+  public init(userId: Swift.String? = nil, userName: Swift.String? = nil, countryCode: Swift.String? = nil, mobileNumber: Swift.String? = nil, email: Swift.String? = nil, profileUrl: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ReceiverDetails : Swift.Codable {
+  public var userId: Swift.String?
+  public var userName: Swift.String?
+  public var countryCode: Swift.String?
+  public var mobileNumber: Swift.String?
+  public var email: Swift.String?
+  public var profileUrl: Swift.String?
+  public init(userId: Swift.String? = nil, userName: Swift.String? = nil, countryCode: Swift.String? = nil, mobileNumber: Swift.String? = nil, email: Swift.String? = nil, profileUrl: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc(CD_ChatMsg) public class CD_ChatMsg : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+@available(*, unavailable, renamed: "Connection")
+extension ChatSDK.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension ChatSDK.Reachability.NetworkStatus : Swift.Hashable {}
+extension ChatSDK.Reachability.Connection : Swift.Equatable {}
+extension ChatSDK.Reachability.Connection : Swift.Hashable {}
+extension ChatSDK.globalLanguage : Swift.Equatable {}
+extension ChatSDK.globalLanguage : Swift.Hashable {}
+extension ChatSDK.globalLanguage : Swift.RawRepresentable {}
