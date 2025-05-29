@@ -26,7 +26,7 @@
 		</data>
 		<key>Chat.storyboardc/LoI-nf-2C7-view-xMc-fn-pSB.nib</key>
 		<data>
-		MAujY6R5/PI3vK3aHZbnH//Thtw=
+		NPCAGOy3ZVYqcgRtH9ra3dhQzTU=
 		</data>
 		<key>Chat.storyboardc/MessageListVC.nib</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zhN1w+7xN8p0CqKG9fCXsds2gv8=
+		oTLy0Z+ZOMkHxgjq+lZ6De//Oo4=
 		</data>
 		<key>MemberCellTVC.nib</key>
 		<data>
@@ -106,23 +106,23 @@
 		</data>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		A5/I7HGASe+FKjwL8l4jGRFa6/E=
+		Vns8w5T8IdXuJzt02OhBu+dNquI=
 		</data>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		qPAUBSQlJwMPrChR0irCfJxlP7s=
+		alZWXQ3ax8A2rpuIM4cOp5zckaw=
 		</data>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		xpPVjvVOkEeyQgnRKo5zk8Yw3wQ=
+		oXAoDBhDwvbs2+zZksOd4aYfdgQ=
 		</data>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		qPAUBSQlJwMPrChR0irCfJxlP7s=
+		alZWXQ3ax8A2rpuIM4cOp5zckaw=
 		</data>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NuV0gCLKrO4NHLPukp1kWTbroIc=
+		kNNz5a7GloqRZic+7u8Oi3o13FY=
 		</data>
 		<key>PhotoReceivedTVC.nib</key>
 		<data>
@@ -308,7 +308,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tSk6RU1+5nuYaHhdfR0qoUYUBJM3CsbC0HxAJaKJTmU=
+			M84rY4uYpWho6DNvJjS1/hjElmet0NYXQwUacInu9Sw=
 			</data>
 		</dict>
 		<key>Chat.storyboardc/MessageListVC.nib</key>
@@ -441,35 +441,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VJzLW4Eii5l6qfEUL90TiTvFOk7us8Tz/GRO6Y9uWME=
+			bKW20bhJHhiRxlny2CfYBG0HxczafOArqSeUU469pQk=
 			</data>
 		</dict>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KrMaPCl4XufkfHEOR0i00Em6aEpymvMD69K3doSg1/8=
+			SxSZphmnAEHElKOtbMNzMgPQagvxkXf2sgphNHzNK44=
 			</data>
 		</dict>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3eK72tzD3YudkAzedXHfvxeQfZp96Y08VTYNqvgHQgU=
+			6pG4zbJfdU8HCray8VmfP1Bf1cFFk/haWkL6Jke3aFE=
 			</data>
 		</dict>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KrMaPCl4XufkfHEOR0i00Em6aEpymvMD69K3doSg1/8=
+			SxSZphmnAEHElKOtbMNzMgPQagvxkXf2sgphNHzNK44=
 			</data>
 		</dict>
 		<key>Modules/ChatSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dJE0XGFS3x81UlEEmdpHimtEMxwskd8rq+5p00K7i38=
+			lvlcpYK38wLcr8xoHjCqrxuLJykh/q+YcQM2/14XD8w=
 			</data>
 		</dict>
 		<key>PhotoReceivedTVC.nib</key>
