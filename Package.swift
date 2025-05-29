@@ -15,7 +15,6 @@ let package = Package(
             targets: ["ChatSDKLibrary"]),
     ],
     dependencies: [
-//        .package(url: "https://github.com/socketio/socket.io-client-swift", from: "16.0.0"),
         .package(url: "https://github.com/socketio/socket.io-client-swift", branch: "master"),
         .package(url: "https://github.com/stasel/WebRTC", from: "136.0.0")
     ],
